@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_overlay.css">
+    <title>Bunny Quests</title>
+</head>
+<body>
+    <!--for the blackout-->
+    <div id="row_overlay"></div>
+
+    <header>
+        <div class="menu_bar">
+            <div class="left_header">
+                <img src="assets/title.png" id="title_img">
+            </div>
+            <div class="right_header">
+                <img src="assets/hamburger.png" id="menu_btn">
+            </div>
+        </div>
+
+        <div id="menu_content" class="menu_show menu_hide">
+            <p>Settings</p>
+            <p>About Us</p>
+        </div>
+    </header>
+
+    <!--for the letter-->
+    <div id="letter_container" class="hide">
+        <div class="letter_upper">
+            <img src="assets/x.png" alt="" id="letter_exit">
+        </div>
+        <div class="letter_content">
+            <p>hello bruh</p>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="welcome_box">
+            <div class="img_box">
+                <img src="assets/logo.png" id="logo">
+            </div>
+            
+            <div class="text_box">
+                <p id="welcome_text">Hewwooo, I am Bnoy and welcome to my quests!</p> 
+            </div>
+        </div>
+
+        <div class="add_task">
+            <div class="add_title">
+                <img src="assets/addicon.jpeg" id="addtask_logo">
+            </div>
+                
+            <div class="addtask_text">
+                <textarea placeholder="Add new Quest..." id="addtask_input"></textarea>
+                <button id="addtask_submit">Submit</buton>
+            </div>
+        </div>
+
+
+        <div class="main_tasks">
+            <div class="tasks_title">
+                <img src="assets/taskicon.jpeg" id="tasks_logo">
+            </div>
+                
+            <div class="tasks_list">
+                <div class="special_task">
+                    <div id="special_click">
+                        <img src="assets/heart.png" class="special_heart">
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="upper">
+                        <div class="task_details">
+                            <p>9/14/27</p>
+                            <p>19:00</p>
+                        </div>
+                        <img src="assets/check.png" alt="x png" class="checktask_button">
+                    </div>
+
+                    <div class="task_content">
+                        <p>Hello</p>
+                    </div>
+
+                    <div class="delete">
+                        <img src="assets/x.png" alt="x png" class="deletetask_button"">
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="upper">
+                        <div class="task_details">
+                            <p>9/14/27</p>
+                            <p>19:00</p>
+                        </div>
+                        <img src="assets/check.png" alt="x png" class="checktask_button">
+                    </div>
+
+                    <div class="task_content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatibus, reiciendis illo, odit quod esse ipsam possimus eligendi explicabo assumenda quisquam, ducimus laborum. Odio dolorem, quod dicta adipisci dolores voluptatibus.</p>
+                    </div>
+
+                    <div class="delete">
+                        <img src="assets/x.png" alt="x png" class="deletetask_button"">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
+

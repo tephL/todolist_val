@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <div id="box" class="mybox"></div>
+
+    <button id="fadeout_btn">Fade out btn</button>
+
+    <script>
+        console.log("n");
+        const fadeout_btn = document.getElementById("fadeout_btn");
+        const box = document.getElementById("box");
+
+        fadeout_btn.addEventListener("click", e => {
+            box.classList.remove("mybox");
+            box.classList.add("mybox2");
+            console.log("clicked");
+            
+        });
+    </script>
+</body>
+</html>

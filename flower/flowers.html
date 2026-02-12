@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulip Bouquet Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Letter -->
+        <div id="lettercontainer" class="letter">
+            <div class="letter-content">
+                <h4>The Valentines is Coming...</h4>
+                <p style="text-align: justify">and I want to spend this special day with my beloved lady and show my love for her. <3</p>
+            </div>
+
+            <div class="letter_question">
+                <h3>You will be Stephen's Valentine</h3>
+            </div>
+
+            <div class="letter_options">                                
+                <div id="yes_btn">
+                    <button id="yes_content">Yes</button>
+                </div> 
+
+                <div id="no_btn">
+                    <button id="no_content">No</button>
+                </div> 
+            </div>
+        </div>
+
+        
+        <div class="bouquet-container">
+            <svg class="bouquet" viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M140 220 L140 340" stroke="#2d5016" stroke-width="4" fill="none"/>
+                <path d="M110 200 L105 340" stroke="#2d5016" stroke-width="4" fill="none"/>
+                <path d="M170 200 L175 340" stroke="#2d5016" stroke-width="4" fill="none"/>
+                <path d="M95 230 L85 340" stroke="#2d5016" stroke-width="3.5" fill="none"/>
+                <path d="M185 230 L195 340" stroke="#2d5016" stroke-width="3.5" fill="none"/>
+
+                
+                <ellipse cx="120" cy="260" rx="18" ry="35" fill="#4a7c28" transform="rotate(-25 120 260)" opacity="0.85"/>
+                <ellipse cx="160" cy="270" rx="18" ry="35" fill="#4a7c28" transform="rotate(25 160 270)" opacity="0.85"/>
+                <ellipse cx="95" cy="290" rx="15" ry="30" fill="#558b2f" transform="rotate(-30 95 290)" opacity="0.8"/>
+                <ellipse cx="185" cy="300" rx="15" ry="30" fill="#558b2f" transform="rotate(30 185 300)" opacity="0.8"/>
+                <ellipse cx="140" cy="285" rx="16" ry="32" fill="#4a7c28" transform="rotate(5 140 285)" opacity="0.85"/>
+
+                
+                <g class="petal-shimmer">
+                    <ellipse cx="140" cy="200" rx="22" ry="35" fill="#ff6b9d" transform="rotate(-15 140 200)"/>
+                    <ellipse cx="140" cy="200" rx="22" ry="35" fill="#ff6b9d" transform="rotate(15 140 200)"/>
+                    <ellipse cx="140" cy="200" rx="22" ry="35" fill="#ff85ad" transform="rotate(-45 140 200)"/>
+                    <ellipse cx="140" cy="200" rx="22" ry="35" fill="#ff85ad" transform="rotate(45 140 200)"/>
+                    <ellipse cx="140" cy="200" rx="18" ry="30" fill="#ffa0c0"/>
+                    <circle cx="140" cy="215" r="8" fill="#ffb347" opacity="0.7"/>
+                </g>
+
+                
+                <g class="petal-shimmer" style="animation-delay: 0.3s">
+                    <ellipse cx="110" cy="180" rx="20" ry="32" fill="#ff6b9d" transform="rotate(-20 110 180)"/>
+                    <ellipse cx="110" cy="180" rx="20" ry="32" fill="#ff6b9d" transform="rotate(10 110 180)"/>
+                    <ellipse cx="110" cy="180" rx="20" ry="32" fill="#ff85ad" transform="rotate(-50 110 180)"/>
+                    <ellipse cx="110" cy="180" rx="20" ry="32" fill="#ff85ad" transform="rotate(40 110 180)"/>
+                    <ellipse cx="110" cy="180" rx="16" ry="28" fill="#ffa0c0"/>
+                    <circle cx="110" cy="193" r="7" fill="#ffb347" opacity="0.7"/>
+                </g>
+
+                
+                <g class="petal-shimmer" style="animation-delay: 0.6s">
+                    <ellipse cx="170" cy="180" rx="20" ry="32" fill="#ff6b9d" transform="rotate(-10 170 180)"/>
+                    <ellipse cx="170" cy="180" rx="20" ry="32" fill="#ff6b9d" transform="rotate(20 170 180)"/>
+                    <ellipse cx="170" cy="180" rx="20" ry="32" fill="#ff85ad" transform="rotate(-40 170 180)"/>
+                    <ellipse cx="170" cy="180" rx="20" ry="32" fill="#ff85ad" transform="rotate(50 170 180)"/>
+                    <ellipse cx="170" cy="180" rx="16" ry="28" fill="#ffa0c0"/>
+                    <circle cx="170" cy="193" r="7" fill="#ffb347" opacity="0.7"/>
+                </g>
+
+                <g class="petal-shimmer" style="animation-delay: 0.9s">
+                    <ellipse cx="95" cy="210" rx="18" ry="30" fill="#ff7aa5" transform="rotate(-25 95 210)"/>
+                    <ellipse cx="95" cy="210" rx="18" ry="30" fill="#ff7aa5" transform="rotate(5 95 210)"/>
+                    <ellipse cx="95" cy="210" rx="18" ry="30" fill="#ff94b8" transform="rotate(-55 95 210)"/>
+                    <ellipse cx="95" cy="210" rx="18" ry="30" fill="#ff94b8" transform="rotate(35 95 210)"/>
+                    <ellipse cx="95" cy="210" rx="14" ry="26" fill="#ffadc9"/>
+                    <circle cx="95" cy="222" r="6" fill="#ffb347" opacity="0.7"/>
+                </g>
+
+                <g class="petal-shimmer" style="animation-delay: 1.2s">
+                    <ellipse cx="185" cy="210" rx="18" ry="30" fill="#ff7aa5" transform="rotate(-5 185 210)"/>
+                    <ellipse cx="185" cy="210" rx="18" ry="30" fill="#ff7aa5" transform="rotate(25 185 210)"/>
+                    <ellipse cx="185" cy="210" rx="18" ry="30" fill="#ff94b8" transform="rotate(-35 185 210)"/>
+                    <ellipse cx="185" cy="210" rx="18" ry="30" fill="#ff94b8" transform="rotate(55 185 210)"/>
+                    <ellipse cx="185" cy="210" rx="14" ry="26" fill="#ffadc9"/>
+                    <circle cx="185" cy="222" r="6" fill="#ffb347" opacity="0.7"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="firefly" style="bottom: 25%;"></div>
+        <div class="firefly" style="bottom: 30%;"></div>
+        <div class="firefly" style="bottom: 20%;"></div>
+        <div class="firefly" style="bottom: 23%;"></div>
+        <div class="firefly" style="bottom: 26%;"></div>
+        <div class="firefly" style="bottom: 24%;"></div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

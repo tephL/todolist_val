@@ -1,0 +1,284 @@
+* {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* for the letter */
+
+
+/* Bouquet Container */
+.bouquet-container {
+    position: absolute;
+    bottom: 5%;
+    width: 280px;
+    height: 350px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: riseUp 1.5s ease-out 3s forwards;
+}
+
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation */
+.bouquet-container.visible {
+    animation: riseUp 1.5s ease-out 3s forwards, pulse 3s ease-in-out 4.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.02); }
+}
+
+/* SVG Bouquet */
+.bouquet {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(255, 182, 193, 0.4));
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.petal-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Letter/Paper */
+.letter {
+    position: absolute;
+    top: 8%;
+    width: 320px;
+    background: #faf8f3;
+    padding: 30px 25px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInLetter 2s ease-out 5s forwards;
+    border: 1px solid #e8e4dc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
+
+
+.letter2 {
+    position: absolute;
+    top: 8%;
+    width: 320px;
+    background: #faf8f3;
+    padding: 30px 25px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInLetter 2s ease-out 5s forwards;
+    border: 1px solid #e8e4dc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.letter_options{
+    display: flex;
+    gap: 1rem;
+}
+
+#yes_btn, #no_btn{
+    width: 50%;    
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+#yes_content, #no_content{
+    background-color: rgb(191 91 122);
+    color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    touch-action: manipulation;
+}   
+
+.cry_img{
+    width: 50px;
+    height: 50px;
+    animation: throb 1.2s ease-in-out infinite;
+}
+
+
+@keyframes throb{
+    0%{
+        transform: scale(1.10);
+    }   
+
+    50%{
+        transform: scale(1.15);
+    }   
+
+    100%{
+        transform: scale(1.10);
+    }       
+}
+
+.letter-details {
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 15px;
+
+    > h4{
+        color: red;
+        text-align: center;
+    }
+}
+
+.cokbtn{
+    text-align: center;
+}
+
+
+
+@keyframes fadeInLetter {
+    to { opacity: 1; }
+}
+
+.letter-content {
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.letter-content h4, .letter_question h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #c75b7a;
+    text-align: center;
+    font-weight: normal;
+}
+
+.letter-content p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.okbtn{
+    border: none;
+    background-color: rgb(191, 91, 122);
+    border-radius: 15px;
+    height: 30px;
+    width: 120px;
+    color: white;
+}   
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Fireflies */
+.firefly {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    opacity: 0;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-300px) translateX(var(--drift-x));
+    }
+}
+
+.firefly:nth-child(1) { left: 30%; animation-delay: 3.2s; --drift-x: 20px; animation-duration: 7s; }
+.firefly:nth-child(2) { left: 45%; animation-delay: 3.8s; --drift-x: -30px; animation-duration: 6.5s; }
+.firefly:nth-child(3) { left: 55%; animation-delay: 4.2s; --drift-x: 25px; animation-duration: 6.8s; }
+.firefly:nth-child(4) { left: 35%; animation-delay: 4.5s; --drift-x: -20px; animation-duration: 7.2s; }
+.firefly:nth-child(5) { left: 60%; animation-delay: 5s; --drift-x: 15px; animation-duration: 6.3s; }
+.firefly:nth-child(6) { left: 50%; animation-delay: 5.5s; --drift-x: -25px; animation-duration: 7.5s; }
+.firefly:nth-child(7) { left: 50%; animation-delay: 6.0s; --drift-x: -23px; animation-duration: 6.5s; }
+.firefly:nth-child(8) { left: 50%; animation-delay: 6.3s; --drift-x: -30px; animation-duration: 7.5s; }
+
+
+.letterout{
+    position: absolute;
+    top: 15%;
+    width: 320px;
+    background: #faf8f3;
+    padding: 30px 25px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    animation: fadeOutLetter 2s ease-out 1s forwards;
+    border: 1px solid #e8e4dc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
+
+@keyframes fadeOutLetter {
+    to { opacity : 0; }
+}
+
+.signature{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.signature p{
+    padding-right: 10px;
+}
+
+#ily{
+    color: red;
+}

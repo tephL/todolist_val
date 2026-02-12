@@ -1,0 +1,23 @@
+.mybox{
+    background-color: brown;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+.mybox2{
+    background-color: brown;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    animation: fadeOut 2s ease-out 1s forwards;
+}
+
+@keyframes fadeOut {
+    to { opacity : 0; }
+}
+
+@keyframes fadeIn {
+    to { opacity : 1; }
+}
